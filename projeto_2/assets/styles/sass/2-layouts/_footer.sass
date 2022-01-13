@@ -1,0 +1,62 @@
+@use '../1-base/_variables.sass'
+@use '../1-base/_base-mixins.sass'
+@use './_layouts-mixins.sass'
+
+.footer 
+  background: variables.$bg-color
+  padding: 3rem
+
+  @include base-mixins.mobile-500
+    padding: 3rem
+
+  a, p
+    color: variables.$gray-text-color
+
+  li, p
+    margin-bottom: 1rem
+
+    a
+      &:hover
+        color: variables.$primary-color
+
+  i
+    margin-right: .3rem
+
+  h3
+    color: variables.$light-color
+    text-transform: uppercase
+    font-size: 1.75rem
+    margin-bottom: 1.5rem
+
+  &-top
+    @include layouts-mixins.center-content
+
+    @include base-mixins.mobile-500
+      flex-direction: column
+
+    &-about, &-categories, 
+    &-information, &-menu
+      max-width: 25%
+
+      @include base-mixins.mobile-500
+        max-width: 100%
+        margin-bottom: 1rem
+
+  &-bottom
+    @include layouts-mixins.center-content
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    &-payments
+      margin-bottom: 2rem
+
+      i
+        color: variables.$dark-color
+        cursor: pointer
+        font-size: 3rem
+        margin: 5px
+        transition: .4s
+
+        &:hover
+          color: variables.$primary-color

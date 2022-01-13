@@ -1,0 +1,9 @@
+@use '../1-base/_base-mixins.sass'
+@use './_layouts-mixins.sass'
+
+.banners
+  @include layouts-mixins.center-content
+  padding: 3rem 0
+
+  @include base-mixins.mobile-500
+    flex-direction: column
